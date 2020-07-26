@@ -21,6 +21,7 @@ console.log(var2);
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+
 let number = "1999";
 console.log(parseInt(number));
 
@@ -98,12 +99,12 @@ function dogFeeder (weight, age)
     }
     else 
     {
-      console.log("Your dog is younger than 2 months!");
+      return console.log("Your dog is younger than 2 months!");
     }
   }
 }
 
-console.log(dogFeeder(15, 1));
+console.log(dogFeeder(15, 1) + ' lbs of raw food');
 
 
 
@@ -204,7 +205,9 @@ const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
 function countVowels(sentence) {
   let counts = 0;
-  for(let i = 0; i < vowels.length; i++) {
+  //loop the length of sentence what we wrote
+  for(let i = 0; i < sentence.length; i++) {
+    //count if the vowels and sentence are matched
     if(vowels.includes(sentence[i])) {
       counts++;
     }
@@ -214,7 +217,7 @@ function countVowels(sentence) {
 
 countVowels('Hello World');
 countVowels('AaEeIiOoUu');
-countVowels('aaaaa');
+countVowels('aaaaaaaaaaaaaaaaaaa');
 
 
 
