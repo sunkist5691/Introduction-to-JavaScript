@@ -156,15 +156,12 @@ convFtToCm(2.3);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 function annoyingSong (numBottles) {
-  console.log(`${numBottles} bottles on the wall`)
-
-  for(let i = 1; i <= numBottles; i++) {
-    let numBottlesLeft = numBottles - i;
-    console.log(`${i} bottles passed around and ${numBottlesLeft} bottles of soda on the wall left.`);
-
+ 
+  for(; numBottles > 0; numBottles--) {
+    console.log(`${numBottles} bottles soda on the wall, ${numBottles} bottles of soda, ${numBottles-1} bottles of soda on the wall left.`);
   }
 }
-annoyingSong(10);
+annoyingSong(99);
 
 
 
