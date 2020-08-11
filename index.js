@@ -232,7 +232,7 @@ function rpsGame(yourChoice) {
     if(yourChoiceValue < computerChoiceValue) {
       return console.log('You lose...T_T')
     } else {
-      return console.log('You WIN! ^^')
+      return console.log('You WIN! ^^') 
     }
   }
 }
@@ -241,4 +241,29 @@ rpsGame(prompt('Choose from rock, paper, scissors'))
 
 
 
-
+function dogFeeders(weight, age) {
+  let food = 0
+  if (age >=1) {
+      if (weight <=5) {
+         food = weight * .05;
+      } else if (weight > 5 &&weight < 10){
+          food = weight * .04;
+      } else if (weight > 10 &&weight < 15){
+          food = weight * .03;
+      } else if (weight > 15){
+          food = weight * .02;
+      }
+  }  else {
+      console.log('puppy')
+  } 
+  if (age >= 0.16666667 &&age <= 0.33) {
+      food = age * .10;
+  } else if (age >= 0.33 &&age <= 0.58333333) {
+      food = age * .05;
+  } else if (age >= 0.58333333 &&age <= 1) {
+      food = age * .04;
+  }
+  return food;
+}
+console.log(dogFeeders(15,1));
+/*re-commit on github*/
