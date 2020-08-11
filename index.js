@@ -229,14 +229,18 @@ countVowels('aaaaaaaaaaaaaaaaaaa');
 
 function rpsGame(yourChoice) {
 
-  let yourChoiceValue = 0.5;
-  let computerChoiceValue = Math.round(Math.random());
+  let yourChoiceValue = Math.floor(Math.random() * 3 + 1) ;
+  let computerChoiceValue = Math.floor(Math.random() * 3 + 1);
+  console.log(yourChoiceValue, computerChoiceValue);
+
 
   if (yourChoice === 'rock' || yourChoice === 'paper' || yourChoice === 'scissors') {
     if(yourChoiceValue < computerChoiceValue) {
       return console.log('You lose...T_T')
+    } else if (yourChoiceValue === computerChoiceValue) {
+      return console.log('TIE! ^^;')
     } else {
-      return console.log('You WIN! ^^') 
+      return console.log('You WIN!')
     }
   }
 }
